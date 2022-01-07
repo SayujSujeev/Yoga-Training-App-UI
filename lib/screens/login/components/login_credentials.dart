@@ -16,13 +16,13 @@ class LoginCredentials extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Please Log In',
+            ' Login Page',
             style: TextStyle(
               fontSize: 24,
             ),
           ),
           SizedBox(
-            height: size.height * 0.03,
+            height: size.height * 0.045,
           ),
           Material(
             elevation: 10.0,
@@ -46,7 +46,7 @@ class LoginCredentials extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: size.height * 0.04,
+            height: size.height * 0.03,
           ),
           Material(
             elevation: 10.0,
@@ -70,46 +70,79 @@ class LoginCredentials extends StatelessWidget {
               ),
             ),
           ),
+
           SizedBox(
-            height: size.height * 0.04,
+            height: size.height * 0.05,
           ),
-          Center(
-            child: Text(
-              'Forget Password!',
-              style: TextStyle(
-                  fontSize: 18, color: black.withOpacity(0.4)),
-            ),
-          ),
-          SizedBox(
-            height: size.height * 0.04,
-          ),
-          InkWell(
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => HomeScreen(),
-              ),
-            ),
-            child: Material(
-                elevation: 10.0,
-                shadowColor: primary,
-                color: primary,
-                borderRadius: BorderRadius.circular(30.0),
-                child: Container(
-                  width: size.width,
-                  height: size.width * 0.15,
-                  child: Center(
-                    child: Text(
-                      'Log In',
-                      style: TextStyle(
-                        color: white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+
+          Align(
+            alignment: Alignment.center,
+            child: Row(
+              children: [
+                InkWell(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
                     ),
                   ),
-                )),
-          ),
+                  child: Material(
+                      elevation: 10.0,
+                      shadowColor: blueGrey.withOpacity(0.65),
+                      color: blueGrey.withOpacity(0.65),
+                      borderRadius: BorderRadius.circular(30.0),
+                      child: Container(
+                        width: size.width*0.42,
+                        height: size.width * 0.13,
+                        child: Center(
+                          child: Text(
+                            '카카오톡 로그인',
+                            style: TextStyle(
+                              color: white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      )),
+                ),
+
+                SizedBox(
+                  width: size.width * 0.025,
+                ),
+
+                InkWell(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ),
+                  ),
+                  child: Material(
+                      elevation: 10.0,
+                      shadowColor: blueGrey.withOpacity(0.65),
+                      color: blueGrey.withOpacity(0.65),
+                      borderRadius: BorderRadius.circular(30.0),
+                      child: Container(
+                        width: size.width*0.42,
+                        height: size.width * 0.13,
+                        child: Center(
+                          child: Text(
+                            '접속하기',
+                            style: TextStyle(
+                              color: white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      )),
+                ),
+              ],
+            ),
+
+          )
+
         ],
       ),
     );

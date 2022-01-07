@@ -14,15 +14,18 @@ class BackgroundImage extends StatelessWidget {
       clipper: CurveClipper(),
       child: Container(
         height: size.height * 0.55,
-        color: blueGrey.withOpacity(0.8),
+        color: blueGrey.withOpacity(0.7),
         child: Padding(
           padding: const EdgeInsets.symmetric(
               horizontal: appPadding / 2,
               vertical: appPadding * 3),
           child: Center(
             child: Image(
-              image: AssetImage('assets/images/yoga.png'),
+              image: AssetImage('assets/images/todoillustration2.png'),
+              height: 340,
+              width: 330,
               fit: BoxFit.cover,
+
             ),
           ),
         ),
