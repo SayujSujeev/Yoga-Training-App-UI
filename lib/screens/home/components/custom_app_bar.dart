@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
                 padding: const EdgeInsets.all(appPadding / 8),
                 child: Container(
                   decoration: new BoxDecoration(
-                    color: primary,
+                    color: Colors.blueGrey,
                     shape: BoxShape.circle,
                   ),
                   child: Padding(
@@ -36,7 +36,7 @@ class CustomAppBar extends StatelessWidget {
                         child: Center(
                           child: CircleAvatar(
                             backgroundImage: AssetImage(
-                              'assets/images/propic.jpeg',
+                              'assets/images/profile.png',
                             ),
                           ),
                         ),
@@ -49,7 +49,7 @@ class CustomAppBar extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    'Sana Kang',
+                    ' Sana Kang',
                     style: TextStyle(color: black, fontWeight: FontWeight.w600,fontSize: 16),
                   ),
 
@@ -75,7 +75,7 @@ class CustomAppBar extends StatelessWidget {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        color: primary,
+                        color: blueGrey.withOpacity(0.9),
                         borderRadius: BorderRadius.circular(30.0)
                     ),
                     child: Padding(
