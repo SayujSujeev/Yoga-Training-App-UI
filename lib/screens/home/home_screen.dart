@@ -1,10 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:yoga_training_app/constants/constants.dart';
-import 'package:yoga_training_app/screens/home/components/courses.dart';
-import 'package:yoga_training_app/screens/home/components/custom_app_bar.dart';
-import 'package:yoga_training_app/screens/home/components/diff_styles.dart';
+import 'package:UnivTodo/constants/constants.dart';
+import 'package:UnivTodo/screens/home/components/courses.dart';
+import 'package:UnivTodo/screens/home/components/custom_app_bar.dart';
+import 'package:UnivTodo/screens/home/components/diff_styles.dart';
 
 
 

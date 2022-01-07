@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-import 'package:yoga_training_app/constants/constants.dart';
+import 'package:UnivTodo/constants/constants.dart';
 
 class CustomAppBar extends StatelessWidget {
   @override

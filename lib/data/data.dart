@@ -1,7 +1,7 @@
 
 
-import 'package:yoga_training_app/models/course.dart';
-import 'package:yoga_training_app/models/style.dart';
+import 'package:UnivTodo/models/course.dart';
+import 'package:UnivTodo/models/style.dart';
 
 final _standStyle = Style(
   imageUrl: 'assets/images/pose2.png',

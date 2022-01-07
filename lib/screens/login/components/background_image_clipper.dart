@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yoga_training_app/constants/constants.dart';
-import 'package:yoga_training_app/screens/login/components/curve_clipper.dart';
+import 'package:UnivTodo/constants/constants.dart';
+import 'package:UnivTodo/screens/login/components/curve_clipper.dart';
 
 
 

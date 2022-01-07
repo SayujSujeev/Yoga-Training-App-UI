@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:yoga_training_app/constants/constants.dart';
-import 'package:yoga_training_app/data/data.dart';
-import 'package:yoga_training_app/models/style.dart';
+import 'package:UnivTodo/constants/constants.dart';
+import 'package:UnivTodo/data/data.dart';
+import 'package:UnivTodo/models/style.dart';
 
 
 class DiffStyles extends StatelessWidget {

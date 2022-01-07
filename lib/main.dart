@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yoga_training_app/screens/login/login_screen.dart';
+import 'package:UnivTodo/screens/login/login_screen.dart';
 
 void main() {
   runApp(MyApp());
