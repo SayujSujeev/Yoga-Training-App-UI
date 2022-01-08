@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:UnivTodo/constants/constants.dart';
 import 'package:UnivTodo/screens/home/components/courses.dart';
 import 'package:UnivTodo/screens/home/components/custom_app_bar.dart';
+import 'package:UnivTodo/screens/home/components/search_bar.dart';
 import 'package:UnivTodo/screens/home/components/diff_styles.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -50,7 +51,17 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         items: <Widget>[
           Icon(Icons.play_arrow_outlined, size: 30,color: selsctedIconIndex == 0 ? white : black,),
-          Icon(Icons.search, size: 30,color: selsctedIconIndex == 1 ? white : black,),
+          InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Home(),
+                ),
+              ),
+              child: Icon(
+                Icons.search, size: 30,color: selsctedIconIndex == 1 ? white : black,
+              )
+          ),
           Icon(Icons.home_outlined, size: 30,color: selsctedIconIndex == 2 ? white : black,),
           InkWell(
             onTap: () => Navigator.push(
