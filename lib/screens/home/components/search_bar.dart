@@ -8,11 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:UnivTodo/constants/constants.dart';
 import 'package:UnivTodo/screens/home/components/calendar.dart';
 
-import 'package:UnivTodo/screens/home/components/courses.dart';
-import 'package:UnivTodo/screens/home/components/custom_app_bar.dart';
-import 'package:UnivTodo/screens/home/components/search_bar.dart';
-
-void main() => runApp(MyApp());
+//void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -40,6 +36,7 @@ class _HomeState extends State<Home> {
   final SearchBarController<Post> _searchBarController = SearchBarController();
   bool isReplay = false;
 
+  // 검색어 & 검색 결과
   Future<List<Post>> _getALlPosts(String text) async {
     await Future.delayed(Duration(seconds: text.length == 4 ? 10 : 1));
     if (isReplay) return [Post("Replaying !", "Replaying body")];
