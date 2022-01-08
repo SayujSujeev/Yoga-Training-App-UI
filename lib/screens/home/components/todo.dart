@@ -4,7 +4,7 @@ import 'package:UnivTodo/data/data.dart';
 import 'package:UnivTodo/models/style.dart';
 
 
-class DiffStyles extends StatelessWidget {
+class Todo extends StatelessWidget {
   _buildStyles(BuildContext context, int index) {
     Size size = MediaQuery.of(context).size;
     Style style = styles[index];
@@ -16,7 +16,7 @@ class DiffStyles extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: appPadding / 2),
           child: Container(
             margin:
-                EdgeInsets.only(top: appPadding * 3, bottom: appPadding * 2),
+            EdgeInsets.only(top: appPadding * 3, bottom: appPadding * 2),
             width: size.width * 0.4,
             height: size.height * 0.2,
             decoration: BoxDecoration(
@@ -61,14 +61,14 @@ class DiffStyles extends StatelessWidget {
                       Row(
                         children: [
                           Icon(
-                            Icons.access_time_outlined,
+                            Icons.favorite_border_outlined,
                             color: black.withOpacity(0.3),
                           ),
                           SizedBox(
                             width: size.width * 0.01,
                           ),
                           Text(
-                            style.time.toString() + ' min',
+                            style.time.toString() + ' Likes',
                             style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
@@ -79,7 +79,7 @@ class DiffStyles extends StatelessWidget {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                            color: primary,
+                            color: blueGrey,
                             borderRadius: BorderRadius.circular(5.0)),
                         child: Icon(
                           Icons.add,
@@ -95,10 +95,10 @@ class DiffStyles extends StatelessWidget {
         ),
         Positioned(
           right: 0,
-          top: 0,
+          top:10,
           child: Container(
             child: Image(
-              width: size.width * 0.3,
+              width: size.width * 0.2,
               height: size.height * 0.2,
               image: AssetImage(style.imageUrl),
             ),
@@ -116,12 +116,12 @@ class DiffStyles extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(
-              horizontal: appPadding, vertical: appPadding),
+              horizontal: appPadding, vertical: appPadding/1.9),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'For Beginners',
+                'KAIST Users',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.w800,

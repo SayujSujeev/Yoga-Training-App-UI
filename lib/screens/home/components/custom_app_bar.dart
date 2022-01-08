@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-import 'package:yoga_training_app/constants/constants.dart';
+import 'package:UnivTodo/constants/constants.dart';
 
 class CustomAppBar extends StatelessWidget {
   @override
@@ -10,7 +10,7 @@ class CustomAppBar extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return  Padding(
-      padding: EdgeInsets.only(left: 20.0,right: 10.0),
+      padding: EdgeInsets.only(left: 20.0,right: 10.0, top: 20.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
                 padding: const EdgeInsets.all(appPadding / 8),
                 child: Container(
                   decoration: new BoxDecoration(
-                    color: primary,
+                    color: Colors.blueGrey,
                     shape: BoxShape.circle,
                   ),
                   child: Padding(
@@ -36,7 +36,7 @@ class CustomAppBar extends StatelessWidget {
                         child: Center(
                           child: CircleAvatar(
                             backgroundImage: AssetImage(
-                              'assets/images/propic.jpeg',
+                              'assets/images/profile.png',
                             ),
                           ),
                         ),
@@ -45,27 +45,37 @@ class CustomAppBar extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                width: size.width * 0.01,
-              ),
-              Text(
-                'Tamara Bellis',
-                style: TextStyle(color: black, fontWeight: FontWeight.w600,fontSize: 18),
-              ),
+
+              Column(
+                children: [
+                  Text(
+                    ' Sana Kang',
+                    style: TextStyle(color: black, fontWeight: FontWeight.w600,fontSize: 16),
+                  ),
+
+                ],
+              )
+
             ],
           ),
 
           Row(
             children: [
+              TextButton.icon(
+                onPressed: () { },
+                icon: Icon(Icons.add, size: 12),
+                label: Text("학교 인증하기"),
+              ),
               Stack(
                 children: [
+
                   Icon(
                     Icons.notifications_none_rounded,
                     size: 30.0,
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        color: primary,
+                        color: blueGrey.withOpacity(0.9),
                         borderRadius: BorderRadius.circular(30.0)
                     ),
                     child: Padding(
@@ -90,3 +100,4 @@ class CustomAppBar extends StatelessWidget {
     );
   }
 }
+

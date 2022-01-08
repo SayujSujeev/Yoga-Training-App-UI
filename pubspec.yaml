@@ -1,4 +1,4 @@
-name: yoga_training_app
+name: UnivTodo
 description: A new Flutter application.
 
 # The following line prevents the package from being accidentally published to
@@ -23,6 +23,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  table_calendar: ^2.2.1
+  shared_preferences: ^2.0.5
+  flutter_icons: ^1.1.0
+  kakao_flutter_sdk: ^0.9.0
+  flutter_staggered_grid_view: 0.3.0
 
 
   # The following adds the Cupertino Icons font to your application.
