@@ -9,6 +9,7 @@ import 'package:UnivTodo/screens/home/components/custom_app_bar.dart';
 import 'package:UnivTodo/screens/home/components/search_bar.dart';
 import 'package:UnivTodo/screens/home/components/diff_styles.dart';
 
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -62,7 +63,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icons.search, size: 30,color: selsctedIconIndex == 1 ? white : black,
               )
           ),
-          Icon(Icons.home_outlined, size: 30,color: selsctedIconIndex == 2 ? white : black,),
+          InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen(),
+                ),
+              ),
+            child: Icon(Icons.home_outlined, size: 30,color: selsctedIconIndex == 2 ? white : black,)
+          ),
           InkWell(
             onTap: () => Navigator.push(
               context,
@@ -71,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             child: Icon(
-                Icons.favorite_border_outlined,
+                Icons.checklist,
                 size: 30,
                 color: selsctedIconIndex == 3 ? white : black
             ),

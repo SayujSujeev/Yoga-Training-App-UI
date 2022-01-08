@@ -4,8 +4,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:flutter/material.dart';
 import 'package:UnivTodo/constants/constants.dart';
-import 'package:UnivTodo/data/data.dart';
-import 'package:UnivTodo/models/style.dart';
+import 'package:UnivTodo/screens/home/home_screen.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:UnivTodo/screens/home/components/search_bar.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 
 class DynamicEvent extends StatefulWidget {
@@ -55,7 +57,62 @@ class _DynamicEventState extends State<DynamicEvent> {
 
   @override
   Widget build(BuildContext context) {
+    int selsctedIconIndex = 3;
     return Scaffold(
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
+        index: selsctedIconIndex,
+        buttonBackgroundColor: Colors.blueGrey,
+        height: 60.0,
+        color: white,
+        onTap: (index) {
+          setState(() {
+            selsctedIconIndex = index;
+          });
+        },
+        animationDuration: Duration(
+          milliseconds: 200,
+        ),
+        items: <Widget>[
+          Icon(Icons.play_arrow_outlined, size: 30,color: selsctedIconIndex == 0 ? white : black,),
+          InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Home(),
+                ),
+              ),
+              child: Icon(
+                Icons.search, size: 30,color: selsctedIconIndex == 1 ? white : black,
+              )
+          ),
+          InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen(),
+                ),
+              ),
+              child: Icon(
+                Icons.home_outlined, size: 30,color: selsctedIconIndex == 2 ? white : black,
+              )
+          ),
+          InkWell(
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DynamicEvent(),
+              ),
+            ),
+            child: Icon(
+                Icons.checklist,
+                size: 30,
+                color: selsctedIconIndex == 3 ? white : black
+            ),
+          ),
+          Icon(Icons.person_outline, size: 30,color: selsctedIconIndex == 4 ? white : black,),
+        ],
+      ),
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
         automaticallyImplyLeading: false,
