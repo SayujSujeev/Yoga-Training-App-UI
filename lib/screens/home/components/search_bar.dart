@@ -58,6 +58,12 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     int selsctedIconIndex = 1;
     return Scaffold(
+      backgroundColor: Colors.grey[100],
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.blueGrey,
+        title: Text('🎓 과목 둘러보기'),
+      ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
         index: selsctedIconIndex,
@@ -112,6 +118,7 @@ class _HomeState extends State<Home> {
           Icon(Icons.person_outline, size: 30,color: selsctedIconIndex == 4 ? white : black,),
         ],
       ),
+
       body: SafeArea(
         child: SearchBar<Post>(
           searchBarPadding: EdgeInsets.symmetric(horizontal: 10),
