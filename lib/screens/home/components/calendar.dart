@@ -55,9 +55,15 @@ class _DynamicEventState extends State<DynamicEvent> {
     return newMap;
   }
 
+
+
+
   @override
   Widget build(BuildContext context) {
+
     int selsctedIconIndex = 3;
+    var _isChecked = false;
+
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
@@ -191,13 +197,28 @@ class _DynamicEventState extends State<DynamicEvent> {
             ..._selectedEvents.map((event) => Padding(
               padding: const EdgeInsets.all(4.0),
 
-              child: Container(
-                height: MediaQuery.of(context).size.height/20,
-                width: MediaQuery.of(context).size.width*0.98,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                  Checkbox(
+                    activeColor: Colors.white,
+                    checkColor: Colors.blueGrey,
+                    hoverColor: blueGrey.withOpacity(0.6),
+                    value: _isChecked,
+                    onChanged: (bool value) {
+                      setState(() => _isChecked = value);
+                    },
+
+                  ),
+
+                  Container(
+                  height: MediaQuery.of(context).size.height/20,
+                  width: MediaQuery.of(context).size.width*0.6,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
                     color: Colors.white.withOpacity(0.6),
                     border: Border.all(color: Colors.blueGrey.withOpacity(0.1))
+
                 ),
                 child: Center(
                     child: Text(event,
@@ -205,7 +226,22 @@ class _DynamicEventState extends State<DynamicEvent> {
                           fontWeight: FontWeight.bold,fontSize: 13),)
                 ),
 
+
               ),
+                  IconButton(
+                    icon: Icon(Icons.edit),
+                    color: blueGrey.withOpacity(0.8),
+                    iconSize: 20.0,
+                    onPressed: () {},
+                  ),
+
+                  IconButton(
+                    icon: Icon(Icons.delete),
+                    color: blueGrey.withOpacity(0.8),
+                    iconSize: 20.0,
+                    onPressed: () {},
+                  ),
+                ],),
 
             )),
           ],
